@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samia Ahmed - MERN Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-in-out;
+      }
+      .slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0">
+            <h1 class="text-xl font-bold text-gray-800">Samia Ahmed</h1>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+                >About</a
+              >
+              <a
+                href="#projects"
+                class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+                >Projects</a
+              >
+              <a
+                href="#contact"
+                class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-600 hover:text-blue-600 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="gradient-bg min-h-screen flex items-center justify-center pt-16"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="fade-in">
+          <div class="mb-8">
+            <div
+              class="w-40 h-40 mx-auto bg-white rounded-full shadow-2xl flex items-center justify-center mb-6 transform hover:scale-110 transition-all duration-500 hover:rotate-6 overflow-hidden"
+            >
+              <img
+                src="avatar2.png"
+                alt="Profile"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+          >
+            Hi, I'm <span class="text-yellow-300">Samia Ahmed</span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            MERN Stack Developer passionate about creating innovative web
+            solutions and user experiences
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#projects"
+              class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              View My Work
+            </a>
+            <a
+              href="#contact"
+              class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+            About Me
+          </h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+        <div class="text-center slide-up">
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            I'm an aspiring MERN stack developer currently doing a 
+            Fellowship at Buildables. I love turning complex problems
+            into simple, beautiful, and intuitive solutions. My goal is to build
+            digital experiences that not only look great but also provide real
+            value to users.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            When I'm not coding, you'll find me exploring new technologies,
+            watching movies, or reading books. I believe in continuous learning
+            and staying up-to-date with the latest industry trends and best practices.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+            My Projects
+          </h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Here are some of my recent projects—showcasing both frontend skills
+            and Python development.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Robotex Website project -->
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center"
+            >
+              <div class="text-center text-white">
+                <div
+                  class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3"
+                >
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Robotex Website</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Multi-Page Frontend (HTML & CSS)
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A sleek, multi-page frontend project called
+                <strong>Robotex_Website</strong>, built entirely with HTML and
+                CSS. Clean design, responsive layouts, and attention to detail
+                are highlights.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="https://github.com/SamiaAhmed30/Robotex_Website"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300"
+                >
+                  GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pomodoro App project -->
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center"
+            >
+              <div class="text-center text-white">
+                <div
+                  class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3"
+                >
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M8 0a8 8 0 100 16A8 8 0 008 0zm1 8H7v4h2V8z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold">Pomodoro App</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Pomodoro Timer (Python)
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A desktop Pomodoro timer app written in
+                <strong>Python</strong>—helping improve focus and productivity
+                through timed work sessions and breaks.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="https://github.com/SamiaAhmed30/Pomodoro_App_Python"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300"
+                >
+                  GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+            Get In Touch
+          </h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            I'm always interested in new opportunities and collaborations. Let's
+            connect and build something amazing together!
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div class="slide-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">Let's Connect</h3>
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-6 h-6 text-blue-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                    ></path>
+                    <path
+                      d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800">Email</h4>
+                  <a
+                    href="mailto:samiaahmed.dev@gmail.com"
+                    class="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                  >
+                    samiaahmed.dev@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-6 h-6 text-gray-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800">LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/samiaahmedconnect/"
+                    class="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                  >
+                    linkedin.com/in/samiaahmedconnect/
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-6 h-6 text-gray-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800">GitHub</h4>
+                  <a
+                    href="https://github.com/SamiaAhmed30"
+                    class="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                  >
+                    github.com/SamiaAhmed30
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-up">
+            <div
+              class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-lg"
+            >
+              <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                Send Me a Message
+              </h3>
+              <form id="contact-form" class="space-y-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows="4"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-all duration-300"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-100 py-8 mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-600">
+          &copy; 2025 Samia Ahmed. All rights reserved.<br />
+          Created with <span class="text-red-500 text-lg">♥</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
